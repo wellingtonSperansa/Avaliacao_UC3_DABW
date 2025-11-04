@@ -39,3 +39,15 @@ Acesse: localhost:8001/auth/create
 7. Views (duplicar - views/admin/products > categories)
 8. Controller (views)
 9. Views (alterar)
+
+
+DB_DRIVER=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=
+DB_USER=
+DB_PASS=
+APP_DEBUG=true
+APP_URL=http://localhost:8001
+CSRF_KEY=changeme-32chars-min
+UPLOAD_MAX_MB=5
