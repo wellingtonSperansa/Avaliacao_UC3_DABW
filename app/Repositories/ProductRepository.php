@@ -37,10 +37,9 @@ class ProductRepository {
         $stmt = Database::getConnection()->prepare("DELETE FROM products WHERE id = ?");
         return $stmt->execute([$id]);
     }
-    public function findByCategoryId(int $id): ?array {
+    public function findByCategoryId(int $id): array {
         $stmt = Database::getConnection()->prepare("SELECT * FROM products WHERE category_id = ?");
         $stmt->execute([$id]);
-        $row = $stmt->fetch();
-        return $row ?: null;
+        return $stmt->fetchAll() ?: [];
     }
 }
